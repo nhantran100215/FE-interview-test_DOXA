@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/FE-interview-test_DOXA/static/css/main.0829cdbc.css",
+    "main.js": "/FE-interview-test_DOXA/static/js/main.718a65c2.js",
+    "static/js/787.7f23caf8.chunk.js": "/FE-interview-test_DOXA/static/js/787.7f23caf8.chunk.js",
+    "static/media/logo.svg": "/FE-interview-test_DOXA/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/FE-interview-test_DOXA/index.html",
+    "main.0829cdbc.css.map": "/FE-interview-test_DOXA/static/css/main.0829cdbc.css.map",
+    "main.718a65c2.js.map": "/FE-interview-test_DOXA/static/js/main.718a65c2.js.map",
+    "787.7f23caf8.chunk.js.map": "/FE-interview-test_DOXA/static/js/787.7f23caf8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0829cdbc.css",
+    "static/js/main.718a65c2.js"
+  ]
+}
