@@ -1,16 +1,37 @@
 {
   "files": {
-    "main.css": "/FE-interview-test_DOXA/static/css/main.0829cdbc.css",
-    "main.js": "/FE-interview-test_DOXA/static/js/main.718a65c2.js",
+    "main.css": "/FE-interview-test_DOXA/static/css/main.e7aad6b6.css",
+    "main.js": "/FE-interview-test_DOXA/static/js/main.f63f7d84.js",
     "static/js/787.7f23caf8.chunk.js": "/FE-interview-test_DOXA/static/js/787.7f23caf8.chunk.js",
-    "static/media/logo.svg": "/FE-interview-test_DOXA/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/la-brands-400.svg": "/FE-interview-test_DOXA/static/media/la-brands-400.928495fae14841a0d610.svg",
+    "static/media/la-solid-900.svg": "/FE-interview-test_DOXA/static/media/la-solid-900.a813034654b4ff0a0bac.svg",
+    "static/media/bg_img_body.png": "/FE-interview-test_DOXA/static/media/bg_img_body.2f7a65fb0306ed7a6bd6.png",
+    "static/media/la-solid-900.eot": "/FE-interview-test_DOXA/static/media/la-solid-900.4184d740eae2fb727bfe.eot",
+    "static/media/la-solid-900.ttf": "/FE-interview-test_DOXA/static/media/la-solid-900.279f38601f1d1655255f.ttf",
+    "static/media/la-brands-400.eot": "/FE-interview-test_DOXA/static/media/la-brands-400.908ce19d18187969b32f.eot",
+    "static/media/la-brands-400.ttf": "/FE-interview-test_DOXA/static/media/la-brands-400.6ecea4826b87fafb97be.ttf",
+    "static/media/la-solid-900.woff": "/FE-interview-test_DOXA/static/media/la-solid-900.893634871a6cbff72157.woff",
+    "static/media/la-regular-400.svg": "/FE-interview-test_DOXA/static/media/la-regular-400.86128b71644abd479cfb.svg",
+    "static/media/la-brands-400.woff": "/FE-interview-test_DOXA/static/media/la-brands-400.925b340f49e65e8bab10.woff",
+    "static/media/la-solid-900.woff2": "/FE-interview-test_DOXA/static/media/la-solid-900.3efd5ba15a279377d224.woff2",
+    "static/media/la-brands-400.woff2": "/FE-interview-test_DOXA/static/media/la-brands-400.3a8109c4ac75662f8355.woff2",
+    "static/media/bg_img_header.jpg": "/FE-interview-test_DOXA/static/media/bg_img_header.18f843a6fd64fdf1a009.jpg",
+    "static/media/la-regular-400.eot": "/FE-interview-test_DOXA/static/media/la-regular-400.77111476f05dd3443047.eot",
+    "static/media/icon-subreddit.png": "/FE-interview-test_DOXA/static/media/icon-subreddit.f773cafe53c1f308fc19.png",
+    "static/media/la-regular-400.ttf": "/FE-interview-test_DOXA/static/media/la-regular-400.cf246e21218cab398b3d.ttf",
+    "static/media/bg-header.png": "/FE-interview-test_DOXA/static/media/bg-header.28b3aeb7eb17f9935652.png",
+    "static/media/la-regular-400.woff": "/FE-interview-test_DOXA/static/media/la-regular-400.aa859c0d08b8193d6586.woff",
+    "static/media/la-regular-400.woff2": "/FE-interview-test_DOXA/static/media/la-regular-400.8dc1cedf1f4987f82b72.woff2",
+    "static/media/reddit-text.svg": "/FE-interview-test_DOXA/static/media/reddit-text.4e3401a0497049ef4ca0054152551474.svg",
     "index.html": "/FE-interview-test_DOXA/index.html",
-    "main.0829cdbc.css.map": "/FE-interview-test_DOXA/static/css/main.0829cdbc.css.map",
-    "main.718a65c2.js.map": "/FE-interview-test_DOXA/static/js/main.718a65c2.js.map",
+    "static/media/icon-subreddit.svg": "/FE-interview-test_DOXA/static/media/icon-subreddit.6d895f869746c744e377accc15a0c18c.svg",
+    "static/media/logo-rgift.svg": "/FE-interview-test_DOXA/static/media/logo-rgift.ffc6e6f6ab740d4706c1840bea0f9962.svg",
+    "main.e7aad6b6.css.map": "/FE-interview-test_DOXA/static/css/main.e7aad6b6.css.map",
+    "main.f63f7d84.js.map": "/FE-interview-test_DOXA/static/js/main.f63f7d84.js.map",
     "787.7f23caf8.chunk.js.map": "/FE-interview-test_DOXA/static/js/787.7f23caf8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0829cdbc.css",
-    "static/js/main.718a65c2.js"
+    "static/css/main.e7aad6b6.css",
+    "static/js/main.f63f7d84.js"
   ]
 }
