@@ -1,10 +1,13 @@
-import { Fragment } from "react"
-import TopSideBar from "./top-side-bar";
+// import { Fragment } from "react"
+import Header from "./top-side-bar";
 
-const Layout=()=>{
+const Layout=({children})=>{
 
-    return <Fragment>
-        <TopSideBar/>
-    </Fragment>
+    return <div className="w-full flex flex-col justify-center items-center overflow-hidden">
+        <Header/>
+        <div className="w-full lg:w-[1024px] ">    
+        {children}
+        </div>
+    </div>
 }
 export default Layout;
