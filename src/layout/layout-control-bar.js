@@ -1,15 +1,15 @@
 import logoRGift from "assets/svg/logo-rgift.svg";
 import classNames from "classnames"
 import { useAuth } from "global";
-import { Link } from "react-router-dom";
-
+import { useSearchParams } from "react-router-dom";
 
 // <i className="lab la-hotjar"></i> hot <i className="las la-burn"></i>   
 // <i className="las la-radiation-alt"></i> new
 // {/* <i className="las la-radiation-alt"></i> top  */}
 
 const LayoutControlBar=({children})=>{
-  const {set_position_fixedBar,fixedBar,set_sortOf,controlBar} =useAuth()
+  const {set_position_fixedBar,fixedBar,controlBar,set_sortOf} =useAuth()
+  const [,set_searchParams]=useSearchParams();
     return (
       <div className="flex flex-col justify-center mt-5 w-full">
       
@@ -39,19 +39,29 @@ const LayoutControlBar=({children})=>{
         {/* topbar */}
           <div className={classNames("flex justify-between text-gray-500 border-[1px] w-full bg-white p-2 rounded mb-5",!controlBar&&"hidden")}>
             <div className="flex text-lg items-center font-semibold">
-            <div className="hover:bg-gray-200 px-1 rounded-2xl mx-1 cursor-pointer" onClick={()=>set_sortOf("hot")}>
+            <div className="hover:bg-gray-200 px-1 rounded-2xl mx-1 cursor-pointer" 
+            onClick={()=>{
+              set_searchParams({type:"hot"});
+              // set_sortOf("hot")
+            }}>
               <i className="lab la-hotjar mr-2"></i>
               <span>Hot</span>
             </div>
-            <div className="hover:bg-gray-200 px-1 rounded-2xl mx-1 cursor-pointer" onClick={()=>set_sortOf("new")}>
+            <div className="hover:bg-gray-200 px-1 rounded-2xl mx-1 cursor-pointer" onClick={()=>{set_searchParams({type:"new"});
+            // set_sortOf("new")
+          }}>
               <i class="lab la-hacker-news-square"></i>
               <span>New</span>
             </div>
-            <div className="hover:bg-gray-200 px-1 rounded-2xl mx-1 cursor-pointer" onClick={()=>set_sortOf("top")}>
+            <div className="hover:bg-gray-200 px-1 rounded-2xl mx-1 cursor-pointer" onClick={()=>{set_searchParams({type:"top"});
+            // set_sortOf("top")
+          }}>
               <i class="las la-level-up-alt"></i>
               <span>Top</span>
             </div>
-            <div className="hover:bg-gray-200 px-1 rounded-2xl mx-1 cursor-pointer" onClick={()=>set_sortOf("rising")}>
+            <div className="hover:bg-gray-200 px-1 rounded-2xl mx-1 cursor-pointer" onClick={()=>{set_searchParams({type:"rising"});
+            // set_sortOf("rising")
+          }}>
             <i class="las la-sort-amount-up-alt"></i>
               <span>Rising</span>
             </div>

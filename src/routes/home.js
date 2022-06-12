@@ -3,38 +3,35 @@ import { homeService } from "services";
 // import classNames from "classnames";
 import PostJSX from "component/post";
 import { useAuth } from "global";
+import { useLocation } from "react-router-dom";
 
 const Home = () => {
-  const {changeFixedBar,set_controlBar,posts,set_posts}=useAuth()
+  const {changeFixedBar,set_controlBar,posts,set_posts,sortOf,set_sortOf}=useAuth()
   const postIds = useRef(null);
   const postRun_arr = useRef(null);
   const check_time = useRef(null);
   const [loadAdd, set_loadAdd] = useState(false);
+  const location=useLocation()
   // const [posts, set_posts] = useState([]);
-
-  const getListPost = async () => {
+// rtj=only&redditWebClient=web2x&app=web2x-client-production&include=prefsSubreddit&sort=top&t=day&layout=card
+  const getListPost = async (statereset=false) => {
     postRun_arr.current = [];
     const data = await homeService.getList({
       rtj: "only",
       redditWebClient: "web2x",
       app: "web2x-client-production",
       include: "prefsSubreddit",
-      after: postIds.current
+      after: !statereset
         ? postIds.current[postIds.current.length - 1]
-        : "t3_v3fs4l",
+        : "",
       dist: 6,
       forceGeopopular: false,
       layout: "classic",
-      sort: "new",
+      sort: sortOf,
       limit: 5,
     });
-    postIds.current = postIds.current
-      ? postIds.current.concat(data.postIds)
-      : data.postIds;
-    data.posts &&
-      set_posts((arr) => {
-        return { ...arr, ...data.posts };
-      });
+    postIds.current = postIds.current&&!statereset? postIds.current.concat(data.postIds): data.postIds;
+    data.posts &&( !statereset?set_posts((arr) => {return { ...arr, ...data.posts };}):set_posts({...data.posts}));
   };
 
   useEffect(() => {
@@ -48,10 +45,19 @@ const Home = () => {
   }, [posts]);
 
   useEffect(() => {
+    sortOf&&getListPost(true)
+  }, [sortOf]);
+
+  useEffect(() => {
+    let typeSort=new URLSearchParams(location.search).get("type");
+    typeSort&&set_sortOf(typeSort);
+      document.addEventListener("scroll",handleScroll)
+    }, [location.search]);
+
+  useEffect(() => {
     if (loadAdd) {
       getListPost();
       set_loadAdd(false);
-      // document.addEventListener("scroll",handleScroll)
     }
   }, [loadAdd]);
 
@@ -64,15 +70,15 @@ const Home = () => {
     let checkPlay = false;
     postRun_arr.current?.forEach((ele) => {
       if (!checkPlay) {
-        let position = ele.getBoundingClientRect();
+        let position = ele?.getBoundingClientRect();
         if (
           position.top + position.bottom > 0 &&
           (position.top + position.bottom) / 2 < window.innerHeight
         ) {
-          ele.play();
+          ele?.play();
           checkPlay = true;
-        } else ele.pause();
-      } else ele.pause();
+        } else ele?.pause();
+      } else ele?.pause();
     });
     // check to the end of page
     if (!check_time.current) {
