@@ -43,7 +43,7 @@ const PostJSX = ({ data, listPostRef, index,autoPlay }) => {
     };
   
     return (
-      <div className="border p-3 rounded hover:border-gray-500 mb-5 cursor-pointer" onClick={()=>navigation(`/detail-posts?id=${data.id}`)}>
+      <div className="border p-3 rounded hover:border-gray-500 mb-5 cursor-pointer bg-opacity-[1]" onClick={()=>navigation(`/detail-posts?id=${data.id}`)}>
         {/* title */}
         <div className="flex items-center">
           <div className="flex flex-col">
