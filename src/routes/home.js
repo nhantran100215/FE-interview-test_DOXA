@@ -37,6 +37,7 @@ const Home = () => {
   useEffect(() => {
     set_loadAdd(true);
     set_controlBar(true);
+    set_sortOf("hot");
     document.addEventListener("scroll", handleScroll);
   }, []);
 

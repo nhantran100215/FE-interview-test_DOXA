@@ -30,7 +30,7 @@ export const AuthContext = React.createContext({
     const position_fixedBar=useState(null);
     const [posts,set_posts]=useState([])
     const postIdsRef=useRef(null);
-    const [sortOf,set_sortOf]=useState("hot");
+    const [sortOf,set_sortOf]=useState(null);
     const [controlBar,set_controlBar]=useState(true);
     
     // useEffect(()=>{

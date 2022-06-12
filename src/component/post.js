@@ -69,6 +69,7 @@ const PostJSX = ({ data, listPostRef, index,autoPlay }) => {
             width={data?.media?.width}
             muted
             autoPlay={index === 0||autoPlay}
+            preload="auto"
           >
             <source src={data?.media?.content} />
           </video>
