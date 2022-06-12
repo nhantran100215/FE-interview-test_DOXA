@@ -1,31 +1,53 @@
 import Layout from "layout";
-import LayoutControlBar from "layout/layout-control-bar";
-import { useEffect } from "react";
-import axios from "axios";
-import {BodyHome} from "routes"
+import {BodyHome,PostDetail} from "routes"
+import AuthProvider from "./global"
+import { HashRouter, Routes, Route,Outlet } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+
+const LayoutRoute=()=>{
+
+  return <Layout>
+    <Outlet/>
+  </Layout>
+}
 
 function App() {
-
-  const getApiTest=async()=>{
-    // ?rtj=only&redditWebClient=web2x&app=web2x-client-production&include=prefsSubreddit&after=t3_v3fs4l&dist=6&forceGeopopular=false&layout=classic&sort=new
-    const {data}=await axios.get("https://gateway.reddit.com/desktopapi/v1/subreddits/gifs",{params:{rtj:"only",redditWebClient:"web2x",app:"web2x-client-production",include:"prefsSubreddit",after:"t3_v3fs4l",dist:6,forceGeopopular:false,layout:"classic",sort:"new"}});
-    console.log("first",data);
-  }
-
-  useEffect(()=>{
-    getApiTest()
-  },[])
+  
   return (
-    <div className="App flex">
-      <div className="bg-[url('./assets/img/bg_img_body.png')] w-full h-full min-h-screen bg-fixed bg-center">
-      <Layout>
-        <LayoutControlBar>
-            <BodyHome/>
-        </LayoutControlBar>
-      </Layout>
+    <AuthProvider>
+      <div className="App flex">
+        <div className="bg-[url('./assets/img/bg_img_body.png')] w-full h-full min-h-screen bg-fixed bg-center">
+          <>
+            <>
+              <HashRouter>
+                <Routes>
+                  <Route element={<LayoutRoute/>} >
+                    <Route exact path="/" element={<BodyHome />} />
+                    <Route exact path="/detail-posts" element={<PostDetail />} />
+                  </Route>
+                </Routes>
+              </HashRouter>
+            </>
+          </>
+        </div>
       </div>
-    </div>
+    </AuthProvider>
   );
 }
 
 export default App;
+
+/*
+0: "t3_v3axch"
+1: "t3_v39msw"
+2: "t3_v38d55"
+3: "t3_v37a2k"
+4: "t3_v37186"
+
+0: "t3_v3axch"
+1: "t3_v39msw"
+2: "t3_v38d55"
+3: "t3_v37a2k"
+4: "t3_v37186"
+
+*/

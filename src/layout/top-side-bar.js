@@ -1,17 +1,17 @@
 import iconSubreddit from "assets/svg/icon-subreddit.svg";
 import iconRedditText from "assets/svg/reddit-text.svg";
-import logoRGift from "assets/svg/logo-rgift.svg";
 import imgIconSubreddit from "assets/img/icon-subreddit.png";
-// import imgBgHeader from "assets/img/bg_img_header.jpg"
 import imgHeader from "assets/img/bg-header.png";
+import { useNavigate } from "react-router-dom";
 
 const TopSideBar = () => {
+  const navigation=useNavigate()
   return (
     <div className="w-full">
       {/* top side bar */}
-      <div className="flex w-full h-12 items-center justify-between bg-white border-b-[1px] border-gray-300 fixed">
+      <div className="flex w-full h-12 items-center justify-between bg-white border-b-[1px] border-gray-300 fixed z-10">
         {/* icon */}
-        <a href="https://www.reddit.com/" className="flex items-center">
+        <div className="flex items-center" onClick={()=>navigation("/")}>
           <img
             src={iconSubreddit}
             alt="icon-subreddit"
@@ -22,7 +22,7 @@ const TopSideBar = () => {
             alt="iconRedditText"
             className="mr-5 h-[18px] w-auto hidden lg:inline-block"
           />
-        </a>
+        </div>
         {/* search */}
         <div className="flex items-center bg-gray-100 border-2 rounded pr-3 text-gray-400 max-w-[650px]  h-auto overflow-hidden w-3/4 sm:w-1/2 xl:w-3/4">
           <i className="las la-search text-2xl"></i>
