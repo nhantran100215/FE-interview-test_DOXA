@@ -6,7 +6,7 @@ import { useAuth } from "global";
 import { useLocation } from "react-router-dom";
 
 const Home = () => {
-  const {changeFixedBar,set_controlBar,posts,set_posts,sortOf,set_sortOf}=useAuth()
+  const {changeFixedBar,set_controlBar,posts,set_posts,sortOf,set_sortOf,fixedBar}=useAuth()
   const postIds = useRef(null);
   const postRun_arr = useRef(null);
   const check_time = useRef(null);
