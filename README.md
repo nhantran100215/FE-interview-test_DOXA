@@ -27,7 +27,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ## Subreddit/Search page
 -  load additional threads once the user scroll to the bottom of the
 current list.
-- play video for the first video in viewport, and pause video when out of viewport.
+- Play video for the first video in the viewport, and pause the video when out of the viewport.
 - The page has a mechanism for sorting topics/threads by hot,new,top,rising.
 - For each thread on this page, i implement :number vote,title,author,time post,number comment,ratio vote.
 ## Thread Page
