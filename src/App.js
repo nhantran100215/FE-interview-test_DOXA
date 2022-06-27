@@ -1,37 +1,9 @@
-import Layout from "layout";
-import {BodyHome,PostDetail} from "routes"
-import AuthProvider from "./global"
-import { HashRouter, Routes, Route,Outlet } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
-
-const LayoutRoute=()=>{
-
-  return <Layout>
-    <Outlet/>
-  </Layout>
-}
+import React from "react";
 
 function App() {
   
   return (
-    <AuthProvider>
-      <div className="App flex">
-        <div className="bg-[url('./assets/img/bg_img_body.png')] w-full h-full min-h-screen bg-fixed bg-center">
-          <>
-            <>
-              <HashRouter>
-                <Routes>
-                  <Route element={<LayoutRoute/>} >
-                    <Route exact path="/" element={<BodyHome />} />
-                    <Route exact path="/detail-posts" element={<PostDetail />} />
-                  </Route>
-                </Routes>
-              </HashRouter>
-            </>
-          </>
-        </div>
-      </div>
-    </AuthProvider>
+    <></>
   );
 }
 
