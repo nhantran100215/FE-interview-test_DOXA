@@ -1,0 +1,13 @@
+{
+        "poUuid": "8f838241-a09b-42cf-bfe8-a6ac30aa67db",
+        "poNumber": "PO-000000001",
+        "deliveryOrderNumber": "DO100000090",
+        "status": "ISSUED",
+        "currencyCode": "SGD",
+        "totalAmount": 5050000,
+        "pendingInvoiceAmount": 5050000,
+        "projectCode": null,
+        "projectTitle": null,
+        "projectUuid": null,
+        "issuedDate": "2022-07-01 03:17:46"
+    }
