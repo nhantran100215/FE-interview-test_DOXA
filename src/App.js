@@ -24,11 +24,11 @@ function App() {
 
   const findTheSameAsElement = () =>{
     let resultJson={};
-    // input1ThesameAs is from excel
+    // input1ThesameAs is from local
     for (const input1ele in input1ThesameAs){
       for (const input2ele in input2ThesameAs){
-        if (input1ele===input2ele) resultJson[input1ele]=input1ThesameAs[input1ele];
-        else if(input1ele===input2ThesameAs[input2ele]) resultJson[input2ele]=input1ThesameAs[input1ele];
+        if (input1ele===input2ele) resultJson[input1ele]=input2ThesameAs[input2ele];
+        else if(input1ThesameAs[input1ele]===input2ele) resultJson[input1ele]=input2ThesameAs[input2ele];
       }
     }
     console.log("findDifferentElement",resultJson);
@@ -66,7 +66,7 @@ function App() {
           result.Mandarin[element.Label?.slice(0, -1)]=element["Value (To be translated) - Chinese "];
           result.MandarinLength++;
         }else {
-          console.log("MandarinMissCount",element);
+          // console.log("MandarinMissCount",element);
           result.MandarinMissCount ++;
         }
         if(element["Value (To be translated) - Bahasa Indonesia "]!==undefined)
@@ -74,7 +74,7 @@ function App() {
           result.Bahasa[element.Label?.slice(0, -1)]=element["Value (To be translated) - Bahasa Indonesia "];
           result.BahasaLength++;
         }else {
-          console.log("BahasaMissCount",element)
+          // console.log("BahasaMissCount",element)
           result.BahasaMissCount ++;
         }
       });
